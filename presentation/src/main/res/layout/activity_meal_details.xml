@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MealDetailsActivity">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/collapsing_toolbar_layout" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:baselineAlignBottom="false"
+        android:src="@drawable/ic_favorite_border"
+        app:backgroundTint="@color/primary"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="end|bottom"
+        app:tint="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_28sdp">
+
+            <ProgressBar
+                android:id="@+id/progressBar_mealDetails"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="@dimen/_8sdp"
+                android:indeterminateTint="@color/primary"
+                android:padding="@dimen/_10sdp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mealName" />
+
+            <TextView
+                android:id="@+id/tv_mealName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont"
+                android:text="Meal Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mealName">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_category"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Category: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_mealCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Beef"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout_category"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout_category"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout_category">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_area"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Area: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_mealArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="British"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_instructionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Instructions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_category" />
+
+            <TextView
+                android:id="@+id/tv_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/myfont"
+                android:text="the mars bars and butter in a heat proof bowl and place over a pan of barely
+                simmering water. Mixing with a whisk, melt until the mixture is smooth."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:paddingBottom="@dimen/_30sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_instructionTitle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:baselineAlignBottom="false"
+        android:src="@drawable/ic_video"
+        app:backgroundTint="@color/white"
+        app:fabSize="normal"
+        app:tint="@color/red" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/bg_splash</item>
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <style name="Theme.FoodApp" parent="Base.Theme.FoodApp" />
+
+
+    <style name="ShapeAppearanceOverlay.MyApp.FAB" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Base.Widget.Material3.CollapsingToolbar." parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerSize">20%</item> <!-- Makes it a perfect circle -->
+    </style>
+</resources>
