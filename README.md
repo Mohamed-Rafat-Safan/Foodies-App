@@ -33,7 +33,7 @@
 ## This app use MVVM with Clean Architecture : </br>  <br>
 <p align="center">
 <img src="https://github.com/user-attachments/assets/0c982574-9fac-44bd-ac80-cdc07a54d619"/>
-</p>  <br> <br>
+</p>  <br> 
 
 ## Images this application: <br>
 
