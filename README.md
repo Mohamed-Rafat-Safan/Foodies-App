@@ -1,6 +1,7 @@
 # Foodies-App
 
-### This foodies application displays meals from Api Meals.
+- This foodies application displays meals from Api Meals.
+  
 - In the Home screen it displays random meal, popular meals and all meal categories, and when you click on the meal, open another screen to display the details of this meal.
 
 - You can add meal to the favorites, and this is stored in the room database.
