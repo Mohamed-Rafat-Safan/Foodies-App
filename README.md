@@ -12,6 +12,7 @@
 ## The skills are used in this application:
 - language: Kotlin </br>
 - Navigation component </br>
+- Material Design </br>
 - View Binding </br>
 - Retrofit2 </br>
 - Modularization </br>
